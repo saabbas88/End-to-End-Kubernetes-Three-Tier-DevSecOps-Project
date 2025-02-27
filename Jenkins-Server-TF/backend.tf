@@ -4,7 +4,8 @@ terraform {
     region         = "us-east-1"
     key            = "End-to-End-Kubernetes-Three-Tier-DevSecOps-Project/Jenkins-Server-TF/terraform.tfstate"
     dynamodb_table = "dynamodb-state-locking"
-    encrypt        = false
+    haskey         = "lockID"
+    encrypt        = True
   }
   required_version = ">=0.13.0"
   required_providers {
